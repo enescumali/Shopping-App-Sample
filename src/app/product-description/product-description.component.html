@@ -1,0 +1,56 @@
+<div class="product-detail row">
+	<div class="content-area">
+		<div id="contentArea">
+			<h1> {{ productName }}</h1>
+			<p> {{ productDesc }}</p>
+			<div class="product-config-area">
+				<div class="product-colors">
+					<p class="color-name"><strong>Color: {{ colorName }}</strong></p>
+					<ul #colorList class="row">
+						<li *ngFor="let color of productColors; 
+							let index = index" 
+							[class.active]="index == 0">
+
+							<a [style.background]= "color.code" 
+								(click)="changeColor( color.name, $event)" 
+								href="javascript:;"></a>
+
+						</li>
+					</ul>	
+				</div>
+				<div class="product-storages">
+					<p class="color-name"><strong>Storage:</strong></p>
+					<div #storageList class="row" >
+						<a href="javascript:;" *ngFor="let storage of productStorages; 
+							let index = index" 
+							[class.active]="index == 0" 
+							(click)="changeStorage($event)">
+								{{  storage }}
+						</a>
+					</div>		
+				</div>	
+			</div>
+		</div>
+		<div class="loader">
+			<img class="main-loading" src="../assets/images/loading.gif" alt="">	
+		</div>
+	</div>
+	<div class="summary-area">
+		<div id="summaryContent" class="summary-content element-hide">
+			<div class="img-container">
+				<img src="{{ productImg }}" alt="">	
+			</div>
+			
+			<p class="title"> {{ productName }}</p>
+			<p class="price"> {{ productPrice }}</p>
+			<a class="primary-btn full-width" [routerLink]="['/checkout', productId ]">Purchase</a>	
+		</div>
+		<div class="loader">
+			<img class="main-loading" src="../assets/images/loading.gif" alt="">	
+		</div>
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,329 @@
+/* line 1, scss/main.scss */
+.clearFix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 9, scss/main.scss */
+.clearFix {
+  display: inline-block;
+}
+
+/* line 13, scss/main.scss */
+* html .clearFix {
+  height: 1%;
+}
+
+/* line 17, scss/main.scss */
+.clearFix {
+  display: block;
+}
+
+/* line 21, scss/main.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 26, scss/main.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial;
+}
+
+/* line 33, scss/main.scss */
+h1, h2, h3, ul, li, p, nav, select, input {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 39, scss/main.scss */
+select {
+  -webkit-appearance: menulist-button;
+}
+
+/* line 46, scss/main.scss */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus, a {
+  outline: none;
+}
+
+/* line 51, scss/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 55, scss/main.scss */
+p, a, label, span, small, li {
+  font-size: 12px;
+}
+
+/* line 59, scss/main.scss */
+p {
+  margin-bottom: 10px;
+}
+
+/* line 63, scss/main.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 67, scss/main.scss */
+header {
+  position: relative;
+  padding: 20px 0;
+}
+/* line 71, scss/main.scss */
+header:before {
+  content: '';
+  position: absolute;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 80, scss/main.scss */
+header a {
+  width: 126px;
+  height: 50px;
+  display: block;
+}
+/* line 85, scss/main.scss */
+header a img {
+  display: block;
+  width: 100%;
+}
+
+/* line 92, scss/main.scss */
+main {
+  padding: 20px 0;
+}
+
+/* line 97, scss/main.scss */
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 103, scss/main.scss */
+.product-list .product-list-item {
+  width: 33%;
+  padding: 10px;
+  min-width: 280px;
+  text-align: center;
+}
+/* line 109, scss/main.scss */
+.product-list .product-list-item .list-inner {
+  padding: 20px;
+  border: 1px solid #d3d3d3;
+}
+/* line 114, scss/main.scss */
+.product-list .product-list-item img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 170px;
+  height: 267px;
+  overflow: hidden;
+}
+/* line 124, scss/main.scss */
+.product-list .product-list-item p.title {
+  font-size: 18px;
+}
+/* line 129, scss/main.scss */
+.product-list .product-list-item p.price {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+/* line 136, scss/main.scss */
+.product-list .loader {
+  width: 50px;
+  height: 50px;
+  top: 150px;
+}
+
+/* line 144, scss/main.scss */
+.product-detail, .checkout, .confirmation {
+  display: flex;
+}
+/* line 147, scss/main.scss */
+.product-detail .content-area, .checkout .content-area, .confirmation .content-area {
+  width: 100%;
+  position: relative;
+}
+/* line 151, scss/main.scss */
+.product-detail .content-area h1, .checkout .content-area h1, .confirmation .content-area h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+/* line 156, scss/main.scss */
+.product-detail .content-area .product-config-area, .checkout .content-area .product-config-area, .confirmation .content-area .product-config-area {
+  padding-top: 20px;
+}
+/* line 160, scss/main.scss */
+.product-detail .content-area .product-colors, .checkout .content-area .product-colors, .confirmation .content-area .product-colors {
+  float: left;
+}
+/* line 163, scss/main.scss */
+.product-detail .content-area .product-colors li, .checkout .content-area .product-colors li, .confirmation .content-area .product-colors li {
+  display: block;
+  float: left;
+}
+/* line 167, scss/main.scss */
+.product-detail .content-area .product-colors li + li, .checkout .content-area .product-colors li + li, .confirmation .content-area .product-colors li + li {
+  margin-left: 10px;
+}
+/* line 172, scss/main.scss */
+.product-detail .content-area .product-colors li.active a, .checkout .content-area .product-colors li.active a, .confirmation .content-area .product-colors li.active a {
+  border: 2px solid #009900;
+}
+/* line 177, scss/main.scss */
+.product-detail .content-area .product-colors li a, .checkout .content-area .product-colors li a, .confirmation .content-area .product-colors li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid #d3d3d3;
+}
+/* line 187, scss/main.scss */
+.product-detail .content-area .product-storages, .checkout .content-area .product-storages, .confirmation .content-area .product-storages {
+  float: left;
+  margin-left: 50px;
+}
+/* line 191, scss/main.scss */
+.product-detail .content-area .product-storages a, .checkout .content-area .product-storages a, .confirmation .content-area .product-storages a {
+  border-radius: 5px;
+  border: 2px solid #d3d3d3;
+  padding: 3px 10px;
+  display: block;
+  float: left;
+  color: #535353;
+}
+/* line 199, scss/main.scss */
+.product-detail .content-area .product-storages a + a, .checkout .content-area .product-storages a + a, .confirmation .content-area .product-storages a + a {
+  margin-left: 5px;
+}
+/* line 203, scss/main.scss */
+.product-detail .content-area .product-storages a.active, .checkout .content-area .product-storages a.active, .confirmation .content-area .product-storages a.active {
+  border: 2px solid #009900;
+}
+/* line 211, scss/main.scss */
+.product-detail .summary-area, .checkout .summary-area, .confirmation .summary-area {
+  margin-left: 40px;
+  width: 250px;
+  text-align: center;
+  min-height: 320px;
+  position: relative;
+}
+/* line 218, scss/main.scss */
+.product-detail .summary-area .img-container, .checkout .summary-area .img-container, .confirmation .summary-area .img-container {
+  min-height: 270px;
+}
+/* line 221, scss/main.scss */
+.product-detail .summary-area .img-container img, .checkout .summary-area .img-container img, .confirmation .summary-area .img-container img {
+  margin: 0 auto 20px auto;
+  display: block;
+}
+/* line 229, scss/main.scss */
+.product-detail .summary-area p.title, .checkout .summary-area p.title, .confirmation .summary-area p.title {
+  font-size: 18px;
+}
+/* line 233, scss/main.scss */
+.product-detail .summary-area p.price, .checkout .summary-area p.price, .confirmation .summary-area p.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 245, scss/main.scss */
+.checkout .content-area .primary-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* line 251, scss/main.scss */
+.checkout .content-area .row {
+  padding-bottom: 20px;
+}
+/* line 254, scss/main.scss */
+.checkout .content-area .row:last-of-type {
+  padding-bottom: 0;
+}
+/* line 258, scss/main.scss */
+.checkout .content-area .row input {
+  width: 100%;
+}
+/* line 261, scss/main.scss */
+.checkout .content-area .row input[type=date] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+}
+/* line 269, scss/main.scss */
+.checkout .content-area .row input[type=date]:focus {
+  border: 1px solid #33C3F0;
+  outline: 0;
+}
+
+/* line 280, scss/main.scss */
+.primary-btn {
+  padding: 9px 12px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  background: #09f;
+  border-radius: 3px;
+  font-weight: bold;
+}
+/* line 289, scss/main.scss */
+.primary-btn.full-width {
+  display: block;
+}
+/* line 293, scss/main.scss */
+.primary-btn:hover {
+  background: #0077CC;
+  color: #fff;
+}
+
+/* line 299, scss/main.scss */
+.text-ellipsis, .product-list .product-list-item p.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+/* line 306, scss/main.scss */
+.loader {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+/* line 315, scss/main.scss */
+.loader img {
+  display: block;
+  width: 100%;
+}
+
+/* line 321, scss/main.scss */
+.element-hide {
+  display: none;
+}
+
+/* line 326, scss/main.scss */
+input.warn {
+  border-color: red !important;
+}

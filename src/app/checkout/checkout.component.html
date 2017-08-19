@@ -1,0 +1,56 @@
+<div class="checkout row">
+	<div class="content-area">
+		<h1>Personal Details</h1>
+		<div class="form-area">
+			<div class="row">
+				<div class="columns six">
+					<label for="">Name: </label>
+					<input type="text" #customerName (focus)="removeWarn($event)">			
+				</div>
+				<div class="columns six">
+					<label for="">Surname: </label>
+					<input type="text" #customerSurname (focus)="removeWarn($event)">			
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns six">
+					<label for="">E-mail: </label>
+					<input type="email" #customerEmail (focus)="removeWarn($event)">		
+				</div>
+				<div class="columns six">
+					<label for="">Date of Birth: </label>
+					<input type="date" #customerBirth (focus)="removeWarn($event)">			
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns six">
+					<label for="">Delivery Date: </label>
+					<input type="date" #customerDlvDate (focus)="removeWarn($event)">			
+				</div>
+			</div>
+			<div class="row">
+				<span class="warn">
+					{{ validationText }}
+				</span>
+			</div>	
+		</div>
+		<a href="javascript:;" class="primary-btn " (click)="submitOrder()">Submit Order</a>
+
+	</div>
+	<div class="summary-area">
+		<div id="summaryContent" class="summary-content element-hide">
+			<div class="img-container">
+				<img src="{{ productImg }}" alt="">	
+			</div>
+			
+			<p class="title"> {{ productName }}</p>
+			<p>{{ productColor}} {{ productStorage }}</p>
+			<p class="price"> {{ productPrice }}</p>
+		</div>
+		<div class="loader">
+			<img class="main-loading" src="../assets/images/loading.gif" alt="">	
+		</div>
+	</div>
+</div>
+
+

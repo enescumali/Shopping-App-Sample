@@ -1,0 +1,17 @@
+
+<div class="product-list row">
+	<div class="product-list-item" *ngFor="let product of productList">
+		<div class="list-inner">
+			<img src="{{ product.img }}" alt="">
+			<p class="title">{{ product.name }}</p>
+			<p class="price">{{ product.price }}</p>
+			<a class="primary-btn full-width" [routerLink]="['/product-description', product.id]">
+				Detail	
+			</a>	
+		</div>
+	</div>
+	<div class="loader" id="catalogueLoader">
+		<img class="main-loading" src="../assets/images/loading.gif" alt="">
+	</div>
+</div>
+	
